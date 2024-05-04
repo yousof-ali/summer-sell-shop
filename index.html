@@ -31,7 +31,7 @@
                         <div class="my-20">
                             <h2 class="text-2xl font-bold mb-8">Kitchenware</h2>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <div class="card p-4 bg-base-100">
+                                <div onclick="firstItem()" class="card p-4 bg-base-100">
                                     <div class="bg-slate-100 rounded-xl flex justify-center items-center py-8">
                                         <figure>
                                             <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
@@ -45,8 +45,8 @@
                                         <i class="far fa-star text-yellow-400"></i>
                                         <i class="far fa-star text-yellow-400"></i>
                                       </div>
-                                      <h2 class="card-title font-bold">K. Accessories</h2>
-                                      <p>39.00 TK</p>                              
+                                      <h2 id="item-name1" class="card-title font-bold">K. Accessories</h2>
+                                      <p><span id="item1">39.00</span> TK</p>                              
                                     </div>
                                 </div>
     
@@ -204,12 +204,22 @@
                             <h2 class="text-2xl font-semibold">Have coupon?</h2>
                             <div class="flex justify-between">
                                 <input class="outline-0 w-full border rounded pl-2" type="text" placeholder="Coupon code">
-                                <button class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black">Apply</button>
+                                <button class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black" disabled>Apply</button>
                             </div>
                         </div>
                         <div class="mt-16 space-y-2 text-2xl bg-white p-6 w-full rounded-xl relative">
+                            <div id="add-items" class="space-y-2">
+
+                            </div>
+                            <hr>
+                            <div class="space-y-2">
+                              <p>Total Price: <span id="totalTaka" class="text-gray-400">00</span> TK</p>
+                              <p>Discunt: <span class="text-gray-400">00</span> TK</p>
+                              <p>Total: <span id="takaTotal" class="text-gray-400">00</span> TK</p>
+                            </div>
+                            <hr>
                             <div class="absolute right-[35%]">
-                                <button class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black">Make Purchase</button>
+                                <button id="makePurchase" class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black" disabled>Make Purchase</button>
                             </div>
                         </div>
                     </div>
@@ -217,5 +227,7 @@
             </div>
         </section>
     </main>
+    <script src="script/function.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
