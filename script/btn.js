@@ -6,16 +6,18 @@
 // console.log(val);
 
 document.getElementById("input-coupon").addEventListener("input", function(){
-     const inputField = document.getElementById("input-coupon");
-     const val = inputField.value;
+    const inputField = document.getElementById("input-coupon");
+    const val = inputField.value;
 
-     const totalprice = getPrice("totalTaka");
+    const totalprice = getPrice("totalTaka");
      
-     const applyBtn = document.getElementById("btn-apply")
-     if(val=="SELL200" && totalprice>=200){
+    const applyBtn = document.getElementById("btn-apply")
+    if(val=="SELL200" && totalprice>=200){
         applyBtn.disabled = false;
-
-    }  
+    }    
+    else{
+        applyBtn.disabled = true;
+    }     
 })
 
 document.getElementById("btn-apply").addEventListener("click",function(){
