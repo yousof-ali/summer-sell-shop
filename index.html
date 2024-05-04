@@ -221,7 +221,26 @@
                             </div>
                             <hr>
                             <div class="absolute right-[35%]">
-                                <button id="makePurchase" class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black" disabled>Make Purchase</button>
+                                <!-- Open the modal using ID.showModal() method -->
+                              <button id="makePurchase" class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black" data-toggle="modal" data-target="#purchaseModal" disabled onclick="my_modal_5.showModal()">Make Purchase</button>
+                              <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box">
+                                  <div class="flex justify-center items-center p-4">
+                                    <img src="images/congo.png" alt="">
+                                  </div>
+                                  <div class="text-center mt-6">
+                                    <h2 class="font-bold text-4xl">Congratulations!</h2>
+                                    <p class="text-base text-gray-400 mt-2">Your Purchase the product</p>
+                                    
+                                  </div>
+                                  <div class="modal-action flex items-center justify-center">
+                                    <form method="dialog">
+                                      <!-- if there is a button in form, it will close the modal -->
+                                      <button id="go-home" class="btn bg-[#E527B2] text-white hover:bg-pink-300 hover:text-black">Go Home</button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </dialog>
                             </div>
                         </div>
                     </div>

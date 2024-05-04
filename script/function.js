@@ -48,4 +48,6 @@ function makePurchase(){
 function setValue(elementId,values){
     const element = document.getElementById(elementId);
     element.innerText = values;
+
+    
 }
