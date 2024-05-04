@@ -33,3 +33,19 @@ function totalPrice(price){
 
     total.innerText = totalInt + price
 }
+
+
+function makePurchase(){
+    const takas = getPrice("totalTaka");
+    const button = document.getElementById('makePurchase');
+
+    if (takas>0){
+        button.disabled = false;
+    }
+}
+
+
+function setValue(elementId,values){
+    const element = document.getElementById(elementId);
+    element.innerText = values;
+}
